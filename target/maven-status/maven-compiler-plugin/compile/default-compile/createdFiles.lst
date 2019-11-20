@@ -1,0 +1,6 @@
+com\kanivets\tickets\controllers\PaymentWebService.class
+com\kanivets\tickets\TicketsApplication.class
+com\kanivets\tickets\config\SwaggerConfig.class
+com\kanivets\tickets\repo\RequestRepository.class
+com\kanivets\tickets\models\Request.class
+com\kanivets\tickets\models\RequestStatus.class
