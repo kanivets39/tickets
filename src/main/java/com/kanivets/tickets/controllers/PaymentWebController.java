@@ -6,6 +6,7 @@ import com.kanivets.tickets.models.RequestStatus;
 import com.kanivets.tickets.repo.RequestRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -19,7 +20,7 @@ public class PaymentWebController {
     private RequestRepository requestRepository;
 
     @PostMapping("/requests")
-    public Long createOrSaveRequest( @RequestBody Request newRequest) {
+    public Long createOrSaveRequest(@Validated @RequestBody Request newRequest) {
 
         requestRepository.save(newRequest);
         log.info("Request was saved");

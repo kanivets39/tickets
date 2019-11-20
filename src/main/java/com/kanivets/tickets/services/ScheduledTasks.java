@@ -26,7 +26,7 @@ public class ScheduledTasks {
 
         try {
 
-            Request request = requestRepository.findFirstByRequestStatusEquals(RequestStatus.ERROR);
+            Request request = requestRepository.findFirstByRequestStatusEquals(RequestStatus.PROSESSING);
 
             PaymentWebController paymentWebController = new PaymentWebController();
             request.setRequestStatus(paymentWebController.randomRequestStatus());

@@ -6,9 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 
 @Data
 @NoArgsConstructor
@@ -24,15 +22,15 @@ public class Request {
 
 
     @NotNull
-    @Min(1)
+    @Positive
     private Long departTime;
 
 
     @NotNull
-    @Min(1)
+    @Positive
     private Long arrivalTime;
 
-    @org.springframework.lang.NonNull
+    @NotNull
     @Enumerated(EnumType.STRING)
     private RequestStatus requestStatus;
 
