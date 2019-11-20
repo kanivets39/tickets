@@ -4,11 +4,13 @@ import java.util.Random;
 
 public enum RequestStatus {
 
+    private final String enumString;
+    
     PROSESSING("PROSESSING"),
     DONE("DONE"),
     ERROR("ERROR");
 
-    private final String enumString;
+    
 
     RequestStatus(String enumString) {
         this.enumString = enumString;
